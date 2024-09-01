@@ -1,0 +1,1 @@
+<?php $host = 'localhost';$user = 'root';$pass = '';$dbname = 'arspneg';$db = mysqli_connect($host, $user, $pass, $dbname);if(!$db){echo "Database connection failed" . mysqli_connect_error();}function query($query){global $db;$result=mysqli_query($db,$query);$rows=[];while($row=mysqli_fetch_assoc($result)){$rows[]=$row;};return $rows;};?>
